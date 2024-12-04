@@ -21,7 +21,7 @@ app.listen(PORT, async ()=>{
     //await redisClient.connect()
     await sequelize.authenticate()
     console.log(`Aplicacion iniciada en el puerto ${PORT}`)
-    //db.sequelize.sync({force:true})
+    db.sequelize.sync({force:true})
 })
 
 //docker run --name redis-server -p 6379:6379 -d redis
